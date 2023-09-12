@@ -7,7 +7,7 @@ My personal portfolio website is a dynamic and interactive platform designed to 
 **Link:** [Click Here ](https://portfolio-saurabhsg.netlify.app/)
 
 **Technologies Used:**
-HTML5, CSS3, JavaScript, Bootstrap framework and Visual Studio Code for coding.
+HTML5, CSS3, JavaScript, Netlify and Visual Studio Code for coding.
 
 **Key Features and Functionalities:**
 - **Project Showcase:** An engaging section featuring a collection of my completed projects, each with a detailed description, technologies used, and a live demo or GitHub link.
