@@ -40,14 +40,17 @@
                         I am a <span class="role"></span>
                     </div>
                     <div class="hero-descr">
-                        Myself Saurabh Gupta, a passionate coder who is currently pursuing M.Sc. fron MNNIT Allahabad.
+                        Myself Saurabh Gupta, a passionate coder who is currently pursuing M.Sc. from MNNIT Allahabad.
                         This is my portfolio website which contains some of my projects and my technical skills.
                     </div>
 
                     <a href="https://www.linkedin.com/in/saurabhsg99/" target="_blank" class="btn">
-                        <button type="submit" class="btn-pink" id="submit-btn">Hire Me
-                            <i class="submit-icon fa-brands fa-linkedin icon"></i>
-                        </button>
+                        
+                            <button type="submit" class="btn-pink" id="submit-btn">Hire Me
+                                <i class="submit-icon fa-brands fa-linkedin icon"></i>
+                            </button>
+                        
+                        
                     </a>
                 </div>
 
@@ -181,9 +184,8 @@
 
                 <div class="skill-subHeading">
                     <p>
-                        Hi Everyone,My name is Saurabh Gupta. Currently I'm pursuing the M.Sc. in Mathematics and
-                        Computing from MNNIT Allahabad. In tech area, currently I am
-                        working on Javascript and DSA.
+                        Hi Everyone, My name is Saurabh Gupta. Currently I'm pursuing the M.Sc. in Mathematics and Computing from MNNIT Allahabad. In tech area, currently I am
+                        working on React.js.
                     </p>
 
                 </div>
@@ -217,24 +219,27 @@
                 <h3 class="contactus-sub-heading">Questions,Thoughts, or any feedback </h3>
 
                 <div class="contactus-form">
-                    <form class="form" action ="mailto:saurabhsg1230@gmail.com">
+                    <form class="form" onsubmit="return validateForm();" action="https://formspree.io/f/xvojqkwy"
+                    method="POST">
                         <div class="formfield-container">
-                            <input class="formfield" type="text" name="name" id="" placeholder="Enter your name" />
-
-                            <input class="formfield" type="email" name="email" id="" placeholder="Enter your email" />
-                            <input class="formfield" type="text" name="subject" id=""
+                            <input class="formfield" type="text" name="Name" id="contact-name" placeholder="Enter your name" onkeyup="validateName()"/>
+                            <span class = "sp" id = "name-error"></span>
+                            <input class="formfield" type="email" name="Email" id="contact-email" placeholder="Enter your email" onkeyup="validateEmail()"/>
+                            <span  class = "sp" id = "email-error"></span>
+                            <input class="formfield" type="text" name="Subject" id=""
                                 placeholder="Enter your subject" />
 
-                            <textarea name="message" id="" cols="30" rows="10" class="formfield formfield-textarea"
-                                placeholder="Enter your message"></textarea>
+                            <textarea name="Message" id="message" cols="30" rows="10" class="formfield formfield-textarea"
+                                placeholder="Enter your message" required></textarea>
                         </div>
 
                         <div>
-                            <a href="mailto:saurabhsg1230@gmail.com">
-                                <button type="submit" class="btn-pink" id="submit-btn">Send message
+                            
+                                <button type="submit" class="btn-pink" id="submit-btn" onclick="return validateForm();">Send message
                                     <i class="submit-icon fa-solid fa-paper-plane"></i>
                                 </button>
-                            </a>
+                                <span class = "sp" id = "form-error"></span>
+                            
                         </div>
                     </form>
                 </div>
@@ -285,18 +290,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
-    <script>
-        var typeData = new Typed(".role", {
-            strings: [
-                "Coder",
-                "Web Developer",
-            ],
-            loop: true,
-            typeSpeed: 100,
-            backSpeed: 80,
-            backDelay: 1000,
-        });
-    </script>
+    <script src="index.js">          </script>
 
 </body>
 
