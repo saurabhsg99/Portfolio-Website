@@ -36,31 +36,57 @@
 .nav-items {
   display: flex;
   gap: 2rem;
-
   padding: 0 2rem;
-
 }
 
 .logo-Text {
   margin-left: -1.2rem;
   font-size: 28px;
+  /* text-shadow: 2px 2px 5px red; */
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  text-shadow: 3px 3px 3px #ababab;
+  /* color:white; */
+  /* text-shadow: 1px 1px 3px #FF0000, 0 0 5px #0000FF; */
 }
 
 .nav-items div a {
   font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   color: black;
 }
 
-
 .nav-items div :hover {
-  transition: 0.8s;
-  font-weight: bold;
+  /* transition: 0.8s;
+  font-weight: bold; */
+  color: rgb(0, 83, 171);
+}
+.underline {
+  display: inline-block;
+  position: relative;
+  color: #0073ac;
 }
 
+.underline:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0073ac;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 .hero-section {
   position: relative;
@@ -74,7 +100,6 @@
   gap: 5rem;
 }
 
-
 .faded-text {
   /* to disable the selection of text */
   user-select: none;
@@ -85,8 +110,6 @@
   font-size: 7rem;
   color: rgb(231, 231, 231);
   font-weight: bold;
-
-
 }
 
 .hero-section-left {
@@ -100,7 +123,6 @@
   font-size: 35px;
   color: #343d68;
   font-weight: 500;
-
 }
 
 .role {
@@ -111,7 +133,6 @@
 .hero-subheading {
   font-size: 45px;
   line-height: 45px;
-
 }
 
 .hero-descr {
@@ -123,6 +144,7 @@
 .btn-pink {
   background-color: var(--bgOrange);
   width: fit-content;
+  display: block;
   color: white;
   padding: 0.8rem 2.3rem;
   box-shadow: 5px 5px 7px 0px #0000003f;
@@ -154,15 +176,16 @@
 }
 
 .btn-pink:hover {
-
   color: black;
-
 }
 
 .btn {
   text-decoration: none;
-  color: while;
+  color: white;
   font-size: 18px;
+  width: fit-content;
+  /* display: inline; not working */
+  /* display: inline-block; not working*/
 }
 
 .hero-section-right {
@@ -202,7 +225,6 @@
     filter: grayscale(1);
     transform: scale(1);
   }
-
 }
 
 .icon-dots {
@@ -216,7 +238,6 @@
 
 @keyframes dotanimation {
   0% {
-
     transform: translateY(0px);
   }
 
@@ -227,7 +248,6 @@
   0% {
     transform: translateY(0px);
   }
-
 }
 
 .icon-cube {
@@ -241,7 +261,6 @@
 
 @keyframes cubeanimation {
   0% {
-
     transform: rotate(0deg) translateY(0px);
   }
 
@@ -252,7 +271,6 @@
   0% {
     transform: rotate(0deg) translateY(0px);
   }
-
 }
 
 .icon-circle {
@@ -269,7 +287,6 @@
     left: 5%;
     bottom: 10%;
   }
-
 }
 
 .icon-zigzak {
@@ -282,12 +299,10 @@
 }
 
 @keyframes zig {
-
   50% {
     left: 10%;
     top: 5%;
   }
-
 }
 
 .icon-plus {
@@ -298,20 +313,16 @@
 }
 
 @keyframes plusanim {
-
   50% {
     left: 48%;
     top: 3%;
   }
-
 }
-
 
 .project-section {
   background-color: #e7e7e7;
   /* margin :4rem; */
   margin-top: 4rem;
-
 }
 
 .page-header {
@@ -340,8 +351,6 @@
 
   position: relative;
   box-shadow: 0px 0px 40px #1f1f1f;
-
-
 }
 
 /* for black tint */
@@ -386,7 +395,6 @@
   transform: scaleX(1);
 }
 
-
 .project-number {
   position: absolute;
   font-size: 200px;
@@ -396,7 +404,6 @@
   /* opacity: 0; Q nhi - kar skte same hoga */
   display: none;
 }
-
 
 .project-card:hover .project-number {
   display: block;
@@ -434,8 +441,7 @@
   background-size: cover;
 }
 
-
-@media (max-width:1300px) {
+@media (max-width: 1300px) {
   .page-header {
     padding-top: 30px;
     color: var(--bgOrange);
@@ -507,10 +513,7 @@
   /* .footerwrapper{
     flex-direction: column;
   } */
-
 }
-
-
 
 .project-content {
   position: absolute;
@@ -539,12 +542,10 @@
   width: 60%;
   flex-wrap: wrap;
   gap: 10px;
-
 }
 
 .project-skill {
   width: 40px;
-
 }
 
 .project-heading {
@@ -557,7 +558,6 @@
   width: 70%;
   font-size: 16px;
   font-style: italic;
-
 }
 
 .btn-group {
@@ -592,7 +592,6 @@
   margin: 10rem auto;
   display: flex;
   gap: 30px;
-
 }
 
 .skills-container-left {
@@ -667,7 +666,6 @@
 
 .skills-logo:hover {
   transform: scale(1.2);
-
 }
 
 .contactus-form-container {
@@ -719,6 +717,18 @@
   margin-top: 27px;
 }
 
+.sp {
+  position: relative;
+  bottom: -2px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(254, 2, 2);
+}
+
+.sp i {
+  color: seagreen;
+}
+
 .formfield-textarea {
   height: auto;
   padding-top: 1rem;
@@ -729,12 +739,10 @@
   border: none;
   font-size: 1.4rem;
   margin: 1rem 0;
-
 }
 
 #submit-btn :hover {
   scale: 0.9;
-
 }
 
 .submit-icon {
@@ -767,7 +775,6 @@ footer {
   font-size: 5em;
 }
 
-
 .link-wrapper {
   display: flex;
   gap: 1.2rem;
@@ -777,7 +784,6 @@ footer {
   color: white;
   text-decoration: none;
   transition: all 0.6s;
-
 }
 
 .link-wrapper div a:hover {
@@ -789,7 +795,7 @@ footer {
   gap: 1rem;
 }
 
-@media(max-width :1024px) {
+@media (max-width: 1024px) {
   .hero-section {
     flex-direction: column;
     justify-content: center;
@@ -819,7 +825,6 @@ footer {
     width: 100%;
     gap: 30px;
     padding-left: 0%;
-
   }
 
   .skills-container-left {
@@ -832,30 +837,27 @@ footer {
 
   .skills-fade-text {
     bottom: -25%;
-    right: 10%
+    right: 10%;
   }
 }
-@media(max-width :560px) {
+@media (max-width: 560px) {
   .faded-text {
-
     bottom: -10%;
     left: 7%;
     font-size: 5em;
-
   }
 }
 
-@media(max-width:610px){
-  .role::before{
-      content: "\a";
-      white-space: pre;
-      
+@media (max-width: 610px) {
+  .role::before {
+    content: "\a";
+    white-space: pre;
   }
-  .hero-subheading{
+  .hero-subheading {
     font-size: 2.5em;
   }
 }
-@media (max-width :450px) {
+@media (max-width: 450px) {
   .user-image img {
     width: 100%;
   }
@@ -878,11 +880,9 @@ footer {
   }
 
   .faded-text {
-
     bottom: -10%;
     left: 7%;
     font-size: 5em;
-
   }
 
   .skills-fade-text {
@@ -898,7 +898,6 @@ footer {
   .footerwrapper {
     flex-direction: column;
   }
-
 }
 
 @media (max-width: 400px) {
@@ -913,25 +912,20 @@ footer {
   }
 }
 
-
-@media (max-width :376px) {
-
+@media (max-width: 376px) {
   .faded-text {
-
     bottom: -9.5%;
     left: 0%;
     font-size: 4em;
-
   }
 
   .skills-fade-text {
     bottom: -14.3%;
     right: 30%;
-    font: size 5em;;
+    font: size 5em;
   }
 
-  .role{
+  .role {
     font-size: 0.8em;
   }
-
 }

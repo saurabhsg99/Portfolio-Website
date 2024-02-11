@@ -7,6 +7,8 @@
     <title>Saurabh Gupta</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
 </head>
 
 <body>
@@ -17,14 +19,14 @@
                     Saurabh Gupta
                 </div>
                 <div class="nav-items">
-                    <div>
+                    <div class="underline">
                         <a href="#project">Projects</a>
                     </div>
-                    <div>
+                    <div class="underline">
                         <a href="#skills">Skills</a>
 
                     </div>
-                    <div>
+                    <div class="underline">
                         <a href="#Contact">Contact Me</a>
 
                     </div>
@@ -224,7 +226,7 @@
 
                 <div class="contactus-form">
                     <form class="form" onsubmit="return validateForm();" action="https://formspree.io/f/xvojqkwy"
-                    method="POST">
+                    method="POST" autocomplete="on">
                         <div class="formfield-container">
                             <input class="formfield" type="text" name="Name" id="contact-name" placeholder="Enter your name" onkeyup="validateName()"/>
                             <span class = "sp" id = "name-error"></span>
